@@ -1,18 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Input } from "antd";
+import React from "react";
+import { Router, Switch, Route } from "react-router-dom";
+import history from "./utils/history";
+import "./App.css";
+import Home from "./pages/Home";
+import ModPlayground from './pages/ModPlayground';
+
 
 // Don't forget to include the CSS styles for antd!
 import "antd/dist/antd.css";
 
 function App() {
   return (
-    <div className="App">
-        <Input
-          placeholder="What needs to be done?"
-        />
-    </div>
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/modplayground" exact component={ModPlayground} />
+      </Switch>
+    </Router>
   );
 }
 
