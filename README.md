@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Creation
+npx create-react-app react-swgoh-mods --template typescript
+
 ## Available Scripts
 
 In the project directory, you can run:
